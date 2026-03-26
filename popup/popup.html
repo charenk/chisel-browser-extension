@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 220px;
+      padding: 16px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #fff;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+    .logo {
+      font-size: 18px;
+      font-weight: 700;
+      color: #6366f1;
+      letter-spacing: -0.5px;
+    }
+    .tagline {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-bottom: 14px;
+    }
+    button {
+      width: 100%;
+      padding: 9px;
+      background: #6366f1;
+      color: white;
+      border: none;
+      border-radius: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: inherit;
+    }
+    button:hover { background: #4f46e5; }
+    button.active { background: #dc2626; }
+    .status {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 10px;
+      text-align: center;
+    }
+    .status.error { color: #ef4444; }
+    .hint {
+      font-size: 11px;
+      color: #94a3b8;
+      margin-top: 12px;
+      line-height: 1.5;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 10px;
+    }
+    kbd {
+      background: #f1f5f9;
+      border-radius: 3px;
+      padding: 1px 4px;
+      font-size: 10px;
+      color: #475569;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">Chisel</div>
+  </div>
+  <div class="tagline">DOM inspector -> Claude prompt</div>
+  <button id="toggleBtn">Activate Inspector</button>
+  <div class="status" id="status"></div>
+  <div class="hint">
+    Hover element -> click -> describe change -> <kbd>Enter</kbd> to copy prompt
+    <br><br>
+    <kbd>Esc</kbd> to dismiss card &nbsp;·&nbsp; <kbd>Esc</kbd> again to deactivate
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
